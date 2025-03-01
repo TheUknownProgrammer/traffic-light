@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("resources/road.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+button {
+  cursor: pointer;
+  user-select: none;
+}
+#container-traffic-light {
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#container-traffic-light > * {
+  margin-right: auto;
+  margin-left: auto;
+}
+#traffic-light {
+  border-radius: 25px;
+  background-color: rgb(50, 50, 50);
+  width: 200px;
+  height: 450px;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+#traffic-light > .halogen-bulb {
+  /*box-shadow: 3px 3px 18px white;*/
+  width: 90px;
+  height: 90px;
+  box-shadow: 0 -20px 0px 5px gray;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: 0.2s;
+  cursor: pointer;
+  user-select: none;
+}
+#pole {
+  height: 400px;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  width: 20px;
+  background-color: gray;
+}
+#container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+}
+.interpretation {
+  font-size: calc(25vh/2);
+  font-family: monospace;
+  background-color: white;
+}
+/* #states button {
+      text-transform: uppercase;
+      background-color: yellow;
+      border: 0;
+      border-radius: 20px;
+      padding: 10px;
+  } */
+@media only screen and (max-width: 1800px) {
+  body {
+    background-image: linear-gradient(green, purple, green);
+  }
+}
