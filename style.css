@@ -72,6 +72,15 @@ button {
   font-family: monospace;
   background-color: white;
 }
+#car {
+  background-image: url("resources/car.png");
+  width: 250px;
+  height: 150px;
+  background-size: 100% 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
 /* #states button {
       text-transform: uppercase;
       background-color: yellow;
