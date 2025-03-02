@@ -51,10 +51,6 @@ traffic_light_components.forEach((component) => {
     });
 });
 
-interpretation.forEach(element => {
-    element.textContent = previousLight != null ? component.getAttribute("data-name") + "!" : "ERROR!";
-});
-
 function carDrive() {
     if(currentLight != null) {
         switch(currentLight.getAttribute("data-name")) {
@@ -66,4 +62,11 @@ function carDrive() {
     }
 }
 
+function init() {
+interpretation.forEach(element => {
+    element.textContent = previousLight != null ? component.getAttribute("data-name") + "!" : "ERROR!";
+});
 setInterval(carDrive, 1000/60);
+}
+
+init();
